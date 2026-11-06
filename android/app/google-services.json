@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "899667690516",
+    "project_id": "clean-flutter-aa4ae",
+    "storage_bucket": "clean-flutter-aa4ae.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899667690516:android:d6e2c02ca9e2bf630f5301",
+        "android_client_info": {
+          "package_name": "com.example.login_register_gorouter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvETHXNkDBTJzxjcUDUIA__vGA8MeSwBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
