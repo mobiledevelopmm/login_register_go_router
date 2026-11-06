@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # login_register_gorouter
 
 A new Flutter project.
@@ -15,3 +16,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# login_register_go_router
+Structure concepts
+>>>>>>> 450e2c0012108037379ad927f8300d8428176c6a
