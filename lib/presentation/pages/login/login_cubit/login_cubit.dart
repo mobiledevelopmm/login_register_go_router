@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 
-import '../../../data/repositories/auth_repository.dart';
-import '../authentication/authentication_cubit.dart';
+import '../../../../data/repositories/auth_repository.dart';
+import '../../../blocs/authentication/authentication_cubit.dart';
 import 'login_state.dart';
 
 @injectable

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:login_register_gorouter/presentation/blocs/authentication/authentication_cubit.dart';
+import 'package:login_register_gorouter/presentation/blocs/global/global_cubit.dart';
 import 'package:login_register_gorouter/presentation/navigation/router.dart';
 import 'package:login_register_gorouter/theme/app_theme.dart';
 
@@ -23,6 +24,10 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider.value(
           value: inject<AuthenticationCubit>(),
+        ),
+
+        BlocProvider.value(
+          value: inject<GlobalCubit>(),
         ),
       ],
       child: MaterialApp.router(

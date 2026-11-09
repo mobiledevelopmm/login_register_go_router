@@ -24,12 +24,12 @@ import 'package:login_register_gorouter/presentation/blocs/authentication/authen
     as _i36;
 import 'package:login_register_gorouter/presentation/blocs/global/global_cubit.dart'
     as _i477;
-import 'package:login_register_gorouter/presentation/blocs/login/login_cubit.dart'
-    as _i774;
-import 'package:login_register_gorouter/presentation/blocs/register/register_cubit.dart'
-    as _i1071;
 import 'package:login_register_gorouter/presentation/navigation/router.dart'
     as _i194;
+import 'package:login_register_gorouter/presentation/pages/login/login_cubit/login_cubit.dart'
+    as _i631;
+import 'package:login_register_gorouter/presentation/pages/register/register_cubit/register_cubit.dart'
+    as _i425;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
 extension GetItInjectableX on _i174.GetIt {
@@ -62,14 +62,14 @@ extension GetItInjectableX on _i174.GetIt {
     gh.singleton<_i36.AuthenticationCubit>(
       () => _i36.AuthenticationCubit(gh<_i35.AuthRepository>()),
     );
-    gh.factory<_i774.LoginCubit>(
-      () => _i774.LoginCubit(
+    gh.factory<_i631.LoginCubit>(
+      () => _i631.LoginCubit(
         gh<_i35.AuthRepository>(),
         gh<_i36.AuthenticationCubit>(),
       ),
     );
-    gh.factory<_i1071.RegisterCubit>(
-      () => _i1071.RegisterCubit(
+    gh.factory<_i425.RegisterCubit>(
+      () => _i425.RegisterCubit(
         gh<_i35.AuthRepository>(),
         gh<_i36.AuthenticationCubit>(),
       ),

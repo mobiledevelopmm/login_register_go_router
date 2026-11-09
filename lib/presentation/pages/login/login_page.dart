@@ -4,19 +4,22 @@ import 'package:go_router/go_router.dart';
 
 import '../../../core/di/injection.dart';
 import '../../../theme/app_colors.dart';
-import '../../blocs/login/login_cubit.dart';
-import '../../blocs/login/login_state.dart';
+import 'login_cubit/login_cubit.dart';
+import 'login_cubit/login_state.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
+
   @override
   State<LoginPage> createState() => _LoginPageState();
+
 }
 
 class _LoginPageState extends State<LoginPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  bool _isPasswordVisible = false;
 
   @override
   void dispose() {
@@ -80,10 +83,22 @@ class _LoginPageState extends State<LoginPage> {
 
                         TextField(
                           controller: _passwordController,
-                          obscureText: true,
-                          decoration: const InputDecoration(
+                          obscureText: !_isPasswordVisible,
+                          decoration: InputDecoration(
                             labelText: 'Password',
-                            prefixIcon: Icon(Icons.lock_outline),
+                            prefixIcon: const Icon(Icons.lock_outline),
+                            suffixIcon: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  _isPasswordVisible = !_isPasswordVisible;
+                                });
+                              },
+                              icon: Icon(
+                                _isPasswordVisible
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
+                              ),
+                            ),
                           ),
                         ),
                         const SizedBox(height: 24),
